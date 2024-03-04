@@ -16,10 +16,10 @@ Ganti nilai-nilai diatas sesuai dengan konfigurasi database Anda.
 
 2. Penggunaan Dan menjalankan Aplikasi
 Di menu utama terdapat beberapa opsi yang tersedia:
-    1. Customer
-    2. Laundry Services
-    3. Laundry Transactions
-    4. Transaction Details
+    a. Customer
+    b. Laundry Services
+    c. Laundry Transactions
+    d. Transaction Details
 Untuk mengelola data customer Anda dapat melakuka view, insert, update dan delete data. Cara menjalankannya aplikasinya:
     1. Untuk melakukan menu view customer Anda bisa melakukan Uncomment di menu viewCustomer(tx),
        // customer := entity.Customer{Id: 6, Name: "Zamal", Address: "jl.tol", Phone_number: "089871293010", Taken_item: 1}
