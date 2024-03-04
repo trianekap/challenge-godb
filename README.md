@@ -1,47 +1,52 @@
-# challenge-godb
+<h2>Pengaturan Koneksi Database</h2>
 
-1. Pastikan anda memiliki database yang telah diatur dan siap digunakan oleh aplikasi. Atur informasi koneksi database pada bagian berikut dalam kode aplikasi (enigma_laundry.go) di Visual Studio Code:
+<p>Pastikan Anda memiliki database yang telah diatur dan siap digunakan oleh aplikasi. Silakan atur informasi koneksi database pada bagian berikut dalam kode aplikasi (<code>enigma_laundry.go</code>):</p>
 
-example :
-
-const (
-	host     = "localhost"
-	port     = 5432
-	user     = "postgres"
-	password = "postgres"
-	dbname   = "laundry_enigma"
+<pre><code>const (
+    host     = "localhost"
+    port     = 5432
+    user     = "postgres"
+    password = "postgres"
+    dbname   = "laundry_enigma"
 )
+</code></pre>
 
-Ganti nilai-nilai diatas sesuai dengan konfigurasi database Anda.
+<p>Ganti nilai-nilai di atas sesuai dengan konfigurasi database Anda.</p>
 
-2. Penggunaan Dan menjalankan Aplikasi
-Di menu utama terdapat beberapa opsi yang tersedia:
-    a. Customer
-    b. Laundry Services
-    c. Laundry Transactions
-    d. Transaction Details
-Untuk mengelola data customer Anda dapat melakuka view, insert, update dan delete data. Cara menjalankannya aplikasinya:
-    1. Untuk melakukan menu view customer Anda bisa melakukan Uncomment di menu viewCustomer(tx),
-       // customer := entity.Customer{Id: 6, Name: "Zamal", Address: "jl.tol", Phone_number: "089871293010", Taken_item: 1}
-	     viewCustomer(tx)
-	     // insertCustomer(customer, tx)
-	     // updateCustomer(customer, tx)
-	     // deleteCustomer(5, tx)
+<h2>Penggunaan dan Menjalankan Aplikasi</h2>
 
-       output :
-        ~/Development/GOLANG/src/challenge-godb [12:30:02]
-          $ go run main.go
-          Successfully Connected!
-           1, Rizal, Jln.Kh.hasan arif, 08123456789, 4,
-           2, Fauzan, jl.Maleer, 082123128932, 1,
-           3, Wildan, jl.Banyuresmi, 089876251627, 3,
-           4, Sena, jl.Cirendeu, 087654216281, 5,
-           5, Desy, Perum Arumaya, 085162718291, 2,
+<p>Aplikasi ini memiliki beberapa opsi yang tersedia di menu utama:</p>
 
-    2. 
-  
+<ol>
+  <li><strong>Customer</strong></li>
+  <li><strong>Laundry Services</strong></li>
+  <li><strong>Laundry Transactions</strong></li>
+  <li><strong>Transaction Details</strong></li>
+</ol>
 
+<p>Untuk mengelola data pelanggan, Anda dapat melihat, menambahkan, memperbarui, dan menghapus data. Berikut adalah cara menjalankan aplikasi:</p>
 
+<ol>
+  <li>Untuk melakukan menu "View Customer", Anda dapat melakukan Uncomment di bagian kode yang bersangkutan:</li>
+</ol>
 
+<pre><code>// customer := entity.Customer{Id: 6, Name: "Zamal", Address: "jl.tol", Phone_number: "089871293010", Taken_item: 1}
+viewCustomer(tx)
+// insertCustomer(customer, tx)
+// updateCustomer(customer, tx)
+// deleteCustomer(5, tx)
+</code></pre>
 
+<p>Output:</p>
 
+<pre><code>~/Development/GOLANG/src/challenge-godb [12:30:02]
+$ go run main.go
+Successfully Connected!
+ 1, Rizal, Jln.Kh.hasan arif, 08123456789, 4,
+ 2, Fauzan, jl.Maleer, 082123128932, 1,
+ 3, Wildan, jl.Banyuresmi, 089876251627, 3,
+ 4, Sena, jl.Cirendeu, 087654216281, 5,
+ 5, Desy, Perum Arumaya, 085162718291, 2,
+</code></pre>
+
+<p>Silakan disesuaikan dan diubah sesuai kebutuhan Anda.</p>
